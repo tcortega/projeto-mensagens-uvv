@@ -1,6 +1,18 @@
-// import { Request, Response } from "express";
-// import { CreateProductInput, UpdateProductInput } from "../schema/product.schema";
-// import { createProduct, deleteProduct, findAndUpdateProduct, findProduct } from "../service/product.service";
+import { Request, Response } from "express";
+import { CreateMessageInput } from "../schema/message.schema";
+import { createMessage, listMessages } from "../service/message.service";
+
+export async function createMessageHandler(req: Request<{}, {}, CreateMessageInput["body"]>, res: Response) {
+  const userId = res.locals.user._id;
+  const message = await createMessage({ ...req.body, user: userId });
+
+  return res.status(201).send(message);
+}
+
+export async function listMessagesHandler(req: Request, res: Response) {
+  const messages = await listMessages();
+  return res.send(messages);
+}
 
 // export async function createProductHandler(req: Request<{}, {}, CreateProductInput["body"]>, res: Response) {
 //   const userId = res.locals.user._id;

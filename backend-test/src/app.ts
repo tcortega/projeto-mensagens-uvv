@@ -15,9 +15,8 @@ app.use(express.json());
 app.use(deserializeUser);
 
 app.listen(port, async () => {
-  logger.info(`Api está rodando em http://localhost:${port}`);
-
   await connect();
-
+  logger.info(`Api esta rodando em http://localhost:${port}`);
+  
   routes(app);
 });

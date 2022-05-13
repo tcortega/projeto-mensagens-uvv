@@ -1,10 +1,12 @@
-// import { FilterQuery, QueryOptions, UpdateQuery } from "mongoose";
-// import ProductModel, { ProductDocument, ProductInput } from "../models/product.model";
 import MessageModel, { MessageInput } from "./../models/message.model";
 
 export async function createMessage(input: MessageInput) {
   const message = await MessageModel.create(input);
   return message;
+}
+
+export async function listMessages() {
+  return await MessageModel.find();
 }
 
 // export async function listMessages()
