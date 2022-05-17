@@ -1,0 +1,63 @@
+.login-form-title {
+    font-size: 30px;
+  }
+  
+  .login-title {
+    font-size: 50px;
+  }
+  
+  .login-subtitle {
+    font-size: 35px;
+  }
+  
+  .register-text {
+    font-size: 20px;
+  }
+  
+  .login-input {
+    background-color: #F0EFFF;
+    color: #A7A3FF;
+    border-radius: 8px;
+    height: 55px;
+    width: 369px;
+    border-width: 0px;
+    font-size: 15px;
+    padding: 20px 15px;
+  }
+  
+  .login-input {
+    background-color: #F0EFFF;
+    color: #A7A3FF;
+    border-radius: 8px;
+    height: 55px;
+    width: 369px;
+    border-width: 0px;
+    font-size: 15px;
+    padding: 20px 15px;
+  }
+  
+  .login-input::placeholder {
+    color: #A7A3FF;
+  }
+  
+  form button {
+    height: 50px;
+    width: 369px;
+    font-size: 14px;
+    /* add shaddow all around button */
+    box-shadow: 0px 0px 30px 0px #A7A3FF;
+  }
+  
+  .login-subtitle {
+    line-height: 22px;
+  }
+  
+  .register-here {
+    line-height: 2px;
+  }
+  
+  a.register-here {
+    color: #4D47C3;
+    text-decoration: none;
+    font-weight: 600;
+  }
