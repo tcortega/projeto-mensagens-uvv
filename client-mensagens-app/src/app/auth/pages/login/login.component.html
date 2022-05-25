@@ -14,16 +14,18 @@
       </div>
     </div>
     <div class="col-md-4">
-        <form action="">
+        <form [formGroup]="form" (submit)="onSubmit()">
             <p class="medium login-form-title">Entrar</p>
             <div class="mt-3">
-                <input class="login-input" type="email" placeholder="Email">
+                <input formControlName="email" class="login-input" type="email" placeholder="Email">
+                <label for="email" class="required" *ngIf="email.invalid && (email.touched || email.dirty)">O email é obrigatório</label>
             </div>
             <div class="mt-4">
-                <input class="login-input" type="password" placeholder="Senha">
+                <input formControlName="password" class="login-input" type="password" placeholder="Senha">
+                <label for="password" class="required" *ngIf="password.invalid && (password.touched || password.dirty)">A senha é obrigatória</label>
             </div>
             <div class="mt-4">
-                <button class="btn btn-purple">
+                <button [disabled]="form.invalid" class="btn btn-purple">
                     Login
                 </button>
             </div>
@@ -31,3 +33,12 @@
     </div>
   </div>
 </div>
+<ngx-spinner
+bdColor="rgba(0, 0, 0, 0.8)"
+size="medium"
+color="#fff"
+type="square-jelly-box"
+[fullScreen]="false"
+><p style="color: white; font-size: 1.6em">Carregando...</p>
+</ngx-spinner
+>

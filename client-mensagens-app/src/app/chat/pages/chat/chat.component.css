@@ -1,0 +1,35 @@
+.chat-input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #F0EFFF;
+    outline: none;
+    box-shadow: none;
+    color: black;
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-bottom: 3em;
+    padding: 0.8em 0;
+}
+
+.message-container a {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .8em;
+    letter-spacing: 2px;
+    color: #816A98;
+}
+
+.message-container p {
+    background: #323035;
+    padding: 1.1em;
+    color: white;
+    margin: 5px 0 10px 0;
+    border-radius: 8px;
+    line-break: strict;
+    word-wrap: break-word;
+}
+
+.chat-container {
+    border: 2px;
+    border-color: black;
+}

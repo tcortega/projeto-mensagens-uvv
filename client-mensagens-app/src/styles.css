@@ -19,3 +19,12 @@
     color: white;
     border-radius: 9px;
 }
+
+.required {
+    color: red;
+    padding-left: .3em;
+    padding-top: .3em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: .85em;
+}

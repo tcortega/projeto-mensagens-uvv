@@ -1,1 +1,21 @@
-<p>chat works!</p>
+<div class="container">
+    <div class="row">
+        <input type="text" class="chat-input" (keyup.enter)="sendMessage($event)" placeholder="Converse por aqui...">
+
+        <div class="message-container d-block">
+            <div class="message" *ngFor="let message of messages">
+                <a href="#" (click)="false">{{message.user}}</a>
+                <p>{{message.content}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-spinner
+bdColor="rgba(0, 0, 0, 0.8)"
+size="medium"
+color="#fff"
+type="square-jelly-box"
+[fullScreen]="false"
+><p style="color: white; font-size: 1.6em">Carregando...</p>
+</ngx-spinner
+>

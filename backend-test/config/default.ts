@@ -1,6 +1,11 @@
 export default {
   port: 3030,
   dbUri: 'mongodb://localhost:27017/trabalho-vinicius',
+  pusherAppId: "1411236",
+  pusherKey: "3cf97e67f3266b74f69c",
+  pusherSecret: "f6b1d4e48532edc9b8b0",
+  pusherCluster: "sa1",
+  pusherUseTLS: true,
   saltWorkFactor: 10,
   accessTokenTtl: "30m",
   refreshTokenTtl: "1y",
