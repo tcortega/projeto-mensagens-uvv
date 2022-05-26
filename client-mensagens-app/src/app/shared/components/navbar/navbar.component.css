@@ -1,0 +1,12 @@
+a.title {
+    padding-top: 20px;
+    padding-left: 28px;
+    font-size: 20px;
+}
+
+a.logout {
+    color: #4D47C3;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+}

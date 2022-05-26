@@ -22,7 +22,6 @@ export async function createMessageHandler(req: Request<{}, {}, CreateMessageInp
 
 export async function getMessagesHandler(req: Request, res: Response) {
   const messages = await listMessages();
-  console.log(messages);
 
   return res.send(messages);
 }

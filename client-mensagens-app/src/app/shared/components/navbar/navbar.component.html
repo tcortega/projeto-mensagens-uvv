@@ -15,22 +15,12 @@
       </span>
     </button>
     <ngx-navbar-collapse id="main-nav" #collapse="ngxNavbarCollapse">
-      <!-- <ul *ngIf="nome" class="navbar-nav mr-auto">
-        <li class="nav-item"><a>Olá, {{nome}}</a></li>
-      </ul>
-      <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Some very long Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Some very long Link</a>
-          </li>
-        </ul> -->
     </ngx-navbar-collapse>
+    <div
+      *ngIf="sessionService.isLoggedIn()"
+      style="position: absolute; right: 50px; top: 28px"
+    >
+      <a class="logout" href="#" (click)="logout()">Sair</a>
+    </div>
   </div>
 </nav>

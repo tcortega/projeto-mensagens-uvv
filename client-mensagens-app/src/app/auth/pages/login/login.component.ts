@@ -22,10 +22,17 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    if (this.sessionService.isLoggedIn()) this.redirectLoggedInUser();
+
     this.form = this.formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
     });
+  }
+
+  redirectLoggedInUser() {
+    this.toastr.success("Restauramos sua sessão para você! :)");
+    this.router.navigate(['/chat']);
   }
 
   onSubmit() {

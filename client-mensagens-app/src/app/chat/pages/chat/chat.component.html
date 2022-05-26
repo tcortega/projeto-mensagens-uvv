@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <input type="text" class="chat-input" (keyup.enter)="sendMessage($event)" placeholder="Converse por aqui...">
+        <input type="text" class="chat-input" (keyup.enter)="sendMessage($event)" [placeholder]="placeholder" [disabled]="isInputDisabled">
 
         <div class="message-container d-block">
             <div class="message" *ngFor="let message of messages">
