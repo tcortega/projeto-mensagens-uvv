@@ -5,12 +5,14 @@ import SessionModel, { SessionDocument } from "../models/session.model";
 import { verifyJwt, signJwt } from "../utils/jwt.utils";
 import { findUser } from "./user.service";
 
+// Função utilizada para a persistência da sessão do usuário.
 export async function createSession(userId: string, userAgent: string) {
   const session = await SessionModel.create({ user: userId, userAgent });
 
   return session.toJSON();
 }
 
+// Função utilizada para listar todas sessões
 export async function findSessions(query: FilterQuery<SessionDocument>) {
   return SessionModel.find(query).lean();
 }
